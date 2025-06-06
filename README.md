@@ -19,9 +19,16 @@
 - 사용자 설정 (성별, 키, 몸무게, 활동성)
 - 음식 예측 및 영양성분 제공
 - 사용자 설정에 맞춘 하루 영양 섭취 기준 제공 및 파이 차트로 시각화
+- 기준 초과 시 경고
 - 일별 식사량 기록 및 일별 식사량 참조 기능 제공
 
 ### 프로그램 실행  
+- 실행
+```
+  cd "project_folder"
+  streamlit run app.py
+```
+
 - 전체 실행  
 ![Image](https://github.com/user-attachments/assets/8f327594-d2a4-4488-9a1b-a29634d72bc5)  
   
