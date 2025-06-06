@@ -25,7 +25,8 @@
 ### 프로그램 실행  
 - 실행
 ```
-  cd "project_folder"
+  zip 파일 다운로드 후 압축 해제
+  cd "프로젝트 폴더 위치"
   streamlit run app.py
 ```
 
