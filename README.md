@@ -67,9 +67,11 @@
   - 손실함수 : Negative Log Likelihood Loss (NLLLoss)
 - 결과
   - accuracy 비교
-  <img width="800" alt="Image" src="https://github.com/user-attachments/assets/1229879d-f46f-4589-926c-1d2423f1af84" />
+  <img width="800" alt="Image" src="https://github.com/user-attachments/assets/94e5e56b-2111-4dd7-8a76-60ea4c7cc97c" />
 
-  - epoch가 증가할 수록 accuracy도 점점 증가하는 추세이며, 학습결과 약 75%의 예측 정확도를 추정함.
+  - Epoch 1~10: 정확도 증가가 비교적 완만하고, 더 학습하면 validation accuracy가 낮아질 가능성 있음.
+  - Epoch 11~20: Fine-tuning 이후 빠른 정확도 상승이 나타나며, validation accuracy는 75.95%까지 도달함.
+
 
 ### Reference
 - [이미지 데이터 셋](https://www.kaggle.com/datasets/dansbecker/food-101/discussion?sort=hotness)
@@ -82,7 +84,7 @@ MIT License
 
 ### 기타(참고사항)
 - app.py : 프로그램 실행 파일
-- Resnet50_food101.ipynb : 모델 학습 실행 파일(google colab 활용)
+- Resnet50_food101.ipynb : 모델 학습 실행 파일(google colab 활용), (학습 결과 저장)
 - resnet50_food101_epoch20.pth : 학습된 모델 파일
 - classes.txt : 음식 클래스명 파일
 - nutrition_numeric_fixed.csv : 영양성분 정보 파일
