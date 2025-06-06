@@ -1,7 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=200&section=header&text=FoodNutritionPredictor&fontSize=40)
 
 # Food nutrition predictor
-음식 및 영양성분 예측
 
 ### 목차
 [1. 소개](#소개)  
