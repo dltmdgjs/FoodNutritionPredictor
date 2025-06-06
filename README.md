@@ -21,7 +21,8 @@
 - 사용자 설정에 맞춘 하루 영양 섭취 기준 제공 및 파이 차트로 시각화
 - 일별 식사량 기록 및 일별 식사량 참조 기능 제공
 
-### 프로그램 실행
+### 프로그램 실행  
+
 ![Image](https://github.com/user-attachments/assets/8f327594-d2a4-4488-9a1b-a29634d72bc5)  
   
 - 첫 화면
@@ -51,11 +52,39 @@
 
  
 
-
 ### 모델 학습 과정
+- Model : Resnet 50
+- Data Set
+  - 이미지 : food 101 (kaggle), 학습과 검증 셋을 9:1로 나누어 각 epoch마다 accuarcy를 측정.
+  - 영양성분 정보 : food-101 nutritional information (kaggle).
+- 학습환경 : google colab(jupyter notebook), A100 gpu 사용
+- 학습시간 : 약 3시간
+- 방법
+  - 20 epoch : 첫 10개의 epoch에 대해서 레이어를 동결시켜 학습하고, 나머지 10개는 동결 해제 후 fine tuning 진행.
+  - learning rate : 첫 10개의 epoch에 대해서 0.001로 설정하고, 나머지 10개는 1e-5로 더 작게 설정하여 오버피팅 방지함.
+  - batch size : 32
+  - optimizer : Adam
+  - 손실함수 : Negative Log Likelihood Loss (NLLLoss)
+- 결과
+  - accuracy 비교
+  <img width="800" alt="Image" src="https://github.com/user-attachments/assets/1229879d-f46f-4589-926c-1d2423f1af84" />
+
+  - epoch가 증가할 수록 accuracy도 점점 증가하는 추세이며, 학습결과 약 75%의 예측 정확도를 추정함.
 
 ### Reference
+- [이미지 데이터 셋](https://www.kaggle.com/datasets/dansbecker/food-101/discussion?sort=hotness)
+- [영양성분 정보](https://www.kaggle.com/datasets/sanadalali/food-101-nutritional-information)
+- [steamlit api](https://docs.streamlit.io/develop/api-reference)
+- [모델 학습 방법 관련](https://ssam2s.tistory.com/4)
 
 ### License
+MIT License
 
 ### 기타(참고사항)
+- app.py : 프로그램 실행 파일
+- Resnet50_food101.ipynb : 모델 학습 실행 파일(google colab 활용)
+- resnet50_food101_epoch20.pth : 학습된 모델 파일
+- classes.txt : 음식 클래스명 파일
+- nutrition_numeric_fixed.csv : 영양성분 정보 파일
+- food101_korean_mapping.xlsx : 한글 영문 매핑 파일
+- meal_log.csv : 섭취 기록 파일
