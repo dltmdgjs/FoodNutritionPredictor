@@ -120,7 +120,7 @@ def plot_nutrient_pies(row):
         st.session_state['activity']
     )
 
-    fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(8, 8))  # 👈 2×2 그리드
+    fig, axes = plt.subplots(nrows=4, ncols=2, figsize=(8, 8)) 
     axes = axes.flatten() 
 
     for i, (key, label) in enumerate(nutrient_keys.items()):
