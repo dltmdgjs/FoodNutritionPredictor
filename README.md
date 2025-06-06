@@ -22,7 +22,7 @@
 - 일별 식사량 기록 및 일별 식사량 참조 기능 제공
 
 ### 프로그램 실행  
-
+- 전체 실행  
 ![Image](https://github.com/user-attachments/assets/8f327594-d2a4-4488-9a1b-a29634d72bc5)  
   
 - 첫 화면
